@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.Resource;
+using SignalManagerAppWebApi.Data;
 
 namespace SignalManagerAppWebApi
 {
@@ -17,6 +18,8 @@ namespace SignalManagerAppWebApi
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddSingleton<ISignalsDataAccessor>(provider => new SignalsJsonDataAccessor("test_data/test_signals.json"));
 
             var app = builder.Build();
 
