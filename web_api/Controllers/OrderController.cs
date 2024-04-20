@@ -20,16 +20,17 @@ namespace SignalManagerAppWebApi.Controllers
 
         // GET: api/<OrderController>
         [HttpGet]
-        public IEnumerable<Order> Get()
+        public IActionResult Get()
         {
-            return _ordersDataAccessor.ReadOrders();
+            var orders = _ordersDataAccessor.ReadOrders();
+            return Ok(orders);
         }
 
         // GET api/<OrderController>/{id}
         [HttpGet("{id}")]
         public IActionResult Get(string id)
         {
-            Order order = _ordersDataAccessor.ReadOrders().FirstOrDefault(o => o.OrderId == id);
+            var order = _ordersDataAccessor.ReadOrders().FirstOrDefault(o => o.OrderId == id);
             if (order == null)
             {
                 return NotFound();
@@ -41,6 +42,11 @@ namespace SignalManagerAppWebApi.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Order newOrder)
         {
+            if (newOrder == null)
+            {
+                return BadRequest("Order object is null");
+            }
+
             _ordersDataAccessor.AddOrder(newOrder);
             return CreatedAtAction(nameof(Get), new { id = newOrder.OrderId }, newOrder);
         }

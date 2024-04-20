@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.IO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using SignalManagerAppWebApi.Models;
 using SignalManagerAppWebApi.Data;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace SignalManagerAppWebApi.Controllers
 {
@@ -13,32 +13,44 @@ namespace SignalManagerAppWebApi.Controllers
     public class SignalController : ControllerBase
     {
         private readonly ISignalsDataAccessor _signalsDataAccessor;
-        public SignalController(ISignalsDataAccessor signlsDataAccessor)
+
+        public SignalController(ISignalsDataAccessor signalsDataAccessor)
         {
-            _signalsDataAccessor = signlsDataAccessor;
+            _signalsDataAccessor = signalsDataAccessor;
         }
 
         // GET api/<SignalController>/
         [HttpGet]
-        public IEnumerable<Signal> Get()
+        public IActionResult Get()
         {
-            return _signalsDataAccessor.ReadSignals();
+            var signals = _signalsDataAccessor.ReadSignals();
+            return Ok(signals);
         }
 
         // GET api/<SignalController>/{id}
         [HttpGet("{id}")]
-        public Signal Get(string id)
+        public IActionResult Get(string id)
         {
-            List<Signal> signals = _signalsDataAccessor.ReadSignals();
-            Signal signal = signals.FirstOrDefault(s => s.Id == id);
-            return signal;
+            var signals = _signalsDataAccessor.ReadSignals();
+            var signal = signals.FirstOrDefault(s => s.Id == id);
 
+            if (signal == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(signal);
         }
 
         // POST api/<SignalController>
         [HttpPost]
         public IActionResult Post([FromBody] Signal newSignal)
         {
+            if (newSignal == null)
+            {
+                return BadRequest("Signal object is null");
+            }
+
             _signalsDataAccessor.AddSignal(newSignal);
             return CreatedAtAction(nameof(Get), new { id = newSignal.Id }, newSignal);
         }
