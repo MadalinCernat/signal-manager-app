@@ -1,178 +1,199 @@
-[
-  {
-    "Id": "15a26a82-6058-4ef9-9b65-1dc6afcb4971",
-    "Symbol": "WNXM",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 1500.0,
-      "Max": 1650.0
-    },
-    "Sell": [
-      1800.0,
-      2000.0,
-      2400.0,
-      2800.0,
-      3500.0
-    ]
+[{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a6ff"
   },
-  {
-    "Id": "33e59db0-9a92-4317-ae6a-ecfdbfa0fb49",
-    "Symbol": "BTC",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 45000.0,
-      "Max": 47000.0
-    },
-    "Sell": [
-      48000.0,
-      49000.0,
-      50000.0,
-      52000.0,
-      54000.0
-    ]
+  "Id": "15a26a82-6058-4ef9-9b65-1dc6afcb4971",
+  "Symbol": "WNXM",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 1500,
+    "Max": 1650
   },
-  {
-    "Id": "82536e6e-3507-4f3d-8b89-bd13cb92953e",
-    "Symbol": "ETH",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 2800.0,
-      "Max": 3000.0
-    },
-    "Sell": [
-      3200.0,
-      3300.0,
-      3400.0,
-      3500.0,
-      3600.0
-    ]
+  "Sell": [
+    1800,
+    2000,
+    2400,
+    2800,
+    3500
+  ]
+},{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a700"
   },
-  {
-    "Id": "94bafdde-6c2f-4c48-8c7b-9a42d3694ae0",
-    "Symbol": "ADA",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 1.5,
-      "Max": 1.7
-    },
-    "Sell": [
-      1.8,
-      1.9,
-      2.0,
-      2.1,
-      2.2
-    ]
+  "Id": "33e59db0-9a92-4317-ae6a-ecfdbfa0fb49",
+  "Symbol": "BTC",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 45000,
+    "Max": 47000
   },
-  {
-    "Id": "b18f34ee-0d56-4788-8e13-4a7c026c1210",
-    "Symbol": "DOGE",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 0.2,
-      "Max": 0.25
-    },
-    "Sell": [
-      0.3,
-      0.35,
-      0.4,
-      0.45,
-      0.5
-    ]
+  "Sell": [
+    48000,
+    49000,
+    50000,
+    52000,
+    54000
+  ]
+},{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a701"
   },
-  {
-    "Id": "d9a7698d-736e-44d8-a8b7-f1a7494e22b0",
-    "Symbol": "XRP",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 0.8,
-      "Max": 0.9
-    },
-    "Sell": [
-      1.0,
-      1.1,
-      1.2,
-      1.3,
-      1.4
-    ]
+  "Id": "82536e6e-3507-4f3d-8b89-bd13cb92953e",
+  "Symbol": "ETH",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 2800,
+    "Max": 3000
   },
-  {
-    "Id": "56b3146f-bff6-4487-9b49-87f7509cc9cf",
-    "Symbol": "LINK",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 25.0,
-      "Max": 30.0
-    },
-    "Sell": [
-      35.0,
-      40.0,
-      45.0,
-      50.0,
-      55.0
-    ]
+  "Sell": [
+    3200,
+    3300,
+    3400,
+    3500,
+    3600
+  ]
+},{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a702"
   },
-  {
-    "Id": "6254c1e8-7938-47e2-b8e8-b48c6b7f69e5",
-    "Symbol": "LTC",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 150.0,
-      "Max": 170.0
-    },
-    "Sell": [
-      180.0,
-      190.0,
-      200.0,
-      210.0,
-      220.0
-    ]
+  "Id": "94bafdde-6c2f-4c48-8c7b-9a42d3694ae0",
+  "Symbol": "ADA",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 1.5,
+    "Max": 1.7
   },
-  {
-    "Id": "59c79952-39c6-40a5-a22f-094657c42356",
-    "Symbol": "BCH",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 600.0,
-      "Max": 650.0
-    },
-    "Sell": [
-      700.0,
-      750.0,
-      800.0,
-      850.0,
-      900.0
-    ]
+  "Sell": [
+    1.8,
+    1.9,
+    2,
+    2.1,
+    2.2
+  ]
+},{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a703"
   },
-  {
-    "Id": "651a798e-9d88-4b09-a2a5-25a8d37bba47",
-    "Symbol": "UNI",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 20.0,
-      "Max": 22.0
-    },
-    "Sell": [
-      24.0,
-      26.0,
-      28.0,
-      30.0,
-      32.0
-    ]
+  "Id": "b18f34ee-0d56-4788-8e13-4a7c026c1210",
+  "Symbol": "DOGE",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 0.2,
+    "Max": 0.25
   },
-  {
-    "Id": "3e5b048b-c242-4c88-8270-b084a732d91f",
-    "Symbol": "AAVE",
-    "Exchange": "BINANCE",
-    "Buy": {
-      "Min": 300.0,
-      "Max": 330.0
-    },
-    "Sell": [
-      360.0,
-      390.0,
-      420.0,
-      450.0,
-      480.0
-    ]
-  }
-]
+  "Sell": [
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5
+  ]
+},{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a704"
+  },
+  "Id": "d9a7698d-736e-44d8-a8b7-f1a7494e22b0",
+  "Symbol": "XRP",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 0.8,
+    "Max": 0.9
+  },
+  "Sell": [
+    1,
+    1.1,
+    1.2,
+    1.3,
+    1.4
+  ]
+},{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a705"
+  },
+  "Id": "56b3146f-bff6-4487-9b49-87f7509cc9cf",
+  "Symbol": "LINK",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 25,
+    "Max": 30
+  },
+  "Sell": [
+    35,
+    40,
+    45,
+    50,
+    55
+  ]
+},{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a706"
+  },
+  "Id": "6254c1e8-7938-47e2-b8e8-b48c6b7f69e5",
+  "Symbol": "LTC",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 150,
+    "Max": 170
+  },
+  "Sell": [
+    180,
+    190,
+    200,
+    210,
+    220
+  ]
+},{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a707"
+  },
+  "Id": "59c79952-39c6-40a5-a22f-094657c42356",
+  "Symbol": "BCH",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 600,
+    "Max": 650
+  },
+  "Sell": [
+    700,
+    750,
+    800,
+    850,
+    900
+  ]
+},{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a708"
+  },
+  "Id": "651a798e-9d88-4b09-a2a5-25a8d37bba47",
+  "Symbol": "UNI",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 20,
+    "Max": 22
+  },
+  "Sell": [
+    24,
+    26,
+    28,
+    30,
+    32
+  ]
+},{
+  "_id": {
+    "$oid": "66325fb07c9c9748a043a709"
+  },
+  "Id": "3e5b048b-c242-4c88-8270-b084a732d91f",
+  "Symbol": "AAVE",
+  "Exchange": "BINANCE",
+  "Buy": {
+    "Min": 300,
+    "Max": 330
+  },
+  "Sell": [
+    360,
+    390,
+    420,
+    450,
+    480
+  ]
+}]

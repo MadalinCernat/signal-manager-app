@@ -13,9 +13,9 @@ namespace SignalManagerAppWebApi.Controllers
     {
         private readonly IOrdersDataAccessor<SellOrder> _ordersDataAccessor;
 
-        public SellOrderController()
+        public SellOrderController(IOrdersDataAccessor<SellOrder> ordersDataAccessor)
         {
-            _ordersDataAccessor = new OrdersJsonDataAccessor<SellOrder>("test_data/test_sellorders.json");
+            _ordersDataAccessor = ordersDataAccessor;
         }
 
         // GET: api/<OrderController>

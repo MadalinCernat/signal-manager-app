@@ -1,7 +1,14 @@
-﻿namespace SignalManagerAppWebApi.Models
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+
+namespace SignalManagerAppWebApi.Models
 {
     public class Signal
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonElement("_id")]
+        public ObjectId BsonId { get; set; }
         public string Id { get; set; } // unique identifier for signal
         public string Symbol { get; set; } // symbol of currency (BTC, ETH, ...)
         public string Exchange { get; set; } // exchange platform
