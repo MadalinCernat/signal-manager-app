@@ -9,13 +9,13 @@ namespace SignalManagerAppWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OrderController : ControllerBase
+    public class BuyOrderController : ControllerBase
     {
-        private readonly IOrdersDataAccessor _ordersDataAccessor;
+        private readonly IOrdersDataAccessor<BuyOrder> _ordersDataAccessor;
 
-        public OrderController(IOrdersDataAccessor ordersDataAccessor)
+        public BuyOrderController()
         {
-            _ordersDataAccessor = ordersDataAccessor;
+            _ordersDataAccessor = new OrdersJsonDataAccessor<BuyOrder>("test_data/test_buyorders.json");
         }
 
         // GET: api/<OrderController>
@@ -40,7 +40,7 @@ namespace SignalManagerAppWebApi.Controllers
 
         // POST api/<OrderController>
         [HttpPost]
-        public IActionResult Post([FromBody] Order newOrder)
+        public IActionResult Post([FromBody] BuyOrder newOrder)
         {
             if (newOrder == null)
             {

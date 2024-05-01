@@ -18,8 +18,8 @@
       ]
     },
     "DateOrdered": "2024-03-30T12:00:00Z",
-    "BuyPrice": 1600,
-    "Stoploss": 1450
+    "BuyPrice": 1600.0,
+    "Stoploss": 1450.0
   },
   {
     "OrderId": "33e59db0-9a92-4317-ae6a-ecfdbfa0fb49",
@@ -40,8 +40,8 @@
       ]
     },
     "DateOrdered": "2024-03-30T12:15:00Z",
-    "BuyPrice": 46000,
-    "Stoploss": 44000
+    "BuyPrice": 46000.0,
+    "Stoploss": 44000.0
   },
   {
     "OrderId": "82536e6e-3507-4f3d-8b89-bd13cb92953e",
@@ -62,7 +62,7 @@
       ]
     },
     "DateOrdered": "2024-03-30T12:30:00Z",
-    "BuyPrice": 2900,
-    "Stoploss": 2700
+    "BuyPrice": 2900.0,
+    "Stoploss": 2700.0
   }
 ]

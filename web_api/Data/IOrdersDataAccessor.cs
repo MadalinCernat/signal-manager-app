@@ -2,10 +2,10 @@
 
 namespace SignalManagerAppWebApi.Data
 {
-    public interface IOrdersDataAccessor
+    public interface IOrdersDataAccessor<T> where T:IOrder
     {
-        void AddOrder(Order newOrder);
+        void AddOrder(T newOrder);
         void DeleteOrder(string orderId);
-        List<Order> ReadOrders();
+        List<T> ReadOrders();
     }
 }

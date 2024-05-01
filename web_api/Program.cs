@@ -20,7 +20,6 @@ namespace SignalManagerAppWebApi
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddSingleton<ISignalsDataAccessor>(provider => new SignalsJsonDataAccessor("test_data/test_signals.json"));
-            builder.Services.AddSingleton<IOrdersDataAccessor>(provider => new OrdersJsonDataAccessor("test_data/test_orders.json"));
             
             var app = builder.Build();
 

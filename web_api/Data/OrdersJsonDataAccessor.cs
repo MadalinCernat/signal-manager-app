@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace SignalManagerAppWebApi.Data
 {
-    public class OrdersJsonDataAccessor : IOrdersDataAccessor
+    public class OrdersJsonDataAccessor<T> : IOrdersDataAccessor<T> where T : IOrder
     {
         private readonly string _filePath;
 
@@ -16,16 +16,16 @@ namespace SignalManagerAppWebApi.Data
             _filePath = filePath;
         }
 
-        public List<Order> ReadOrders()
+        public List<T> ReadOrders()
         {
             string json = File.ReadAllText(_filePath);
-            List<Order> orders = JsonConvert.DeserializeObject<List<Order>>(json);
+            List<T> orders = JsonConvert.DeserializeObject<List<T>>(json);
             return orders;
         }
 
-        public void AddOrder(Order newOrder)
+        public void AddOrder(T newOrder)
         {
-            List<Order> orders = ReadOrders();
+            List<T> orders = ReadOrders();
             orders.Add(newOrder);
             string json = JsonConvert.SerializeObject(orders, Formatting.Indented);
             File.WriteAllText(_filePath, json);
@@ -33,8 +33,8 @@ namespace SignalManagerAppWebApi.Data
 
         public void DeleteOrder(string orderId)
         {
-            List<Order> orders = ReadOrders();
-            Order orderToRemove = orders.FirstOrDefault(o => o.OrderId == orderId);
+            List<T> orders = ReadOrders();
+            T orderToRemove = orders.FirstOrDefault(o => o.OrderId == orderId);
             if (orderToRemove != null)
             {
                 orders.Remove(orderToRemove);
