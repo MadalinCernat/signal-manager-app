@@ -1,0 +1,86 @@
+[
+  {
+    "OrderId": "1a26a82f-6058-4ef9-9b65-1dc6afcb4971",
+    "Buy": {
+      "OrderId": "1a26a82f-6058-4ef9-9b65-1dc6afcb4971",
+      "Signal": {
+        "Id": "15a26a82-6058-4ef9-9b65-1dc6afcb4971",
+        "Symbol": "WNXM",
+        "Exchange": "BINANCE",
+        "Buy": {
+          "Min": 1500.0,
+          "Max": 1650.0
+        },
+        "Sell": [
+          1800.0,
+          2000.0,
+          2400.0,
+          2800.0,
+          3500.0
+        ]
+      },
+      "DateOrdered": "2024-03-30T12:00:00Z",
+      "BuyPrice": 1600.0,
+      "Stoploss": 1450.0
+    },
+    "DateOrdered": "2024-03-30T12:45:00Z",
+    "SellPrice": 1800.0,
+    "Profit": 200.0
+  },
+  {
+    "OrderId": "33e59db0-9a92-4317-ae6a-ecfdbfa0fb49",
+    "Buy": {
+      "OrderId": "33e59db0-9a92-4317-ae6a-ecfdbfa0fb49",
+      "Signal": {
+        "Id": "33e59db0-9a92-4317-ae6a-ecfdbfa0fb49",
+        "Symbol": "BTC",
+        "Exchange": "BINANCE",
+        "Buy": {
+          "Min": 45000.0,
+          "Max": 47000.0
+        },
+        "Sell": [
+          48000.0,
+          49000.0,
+          50000.0,
+          52000.0,
+          54000.0
+        ]
+      },
+      "DateOrdered": "2024-03-30T12:15:00Z",
+      "BuyPrice": 46000.0,
+      "Stoploss": 44000.0
+    },
+    "DateOrdered": "2024-03-30T13:00:00Z",
+    "SellPrice": 49000.0,
+    "Profit": 3000.0
+  },
+  {
+    "OrderId": "82536e6e-3507-4f3d-8b89-bd13cb92953e",
+    "Buy": {
+      "OrderId": "82536e6e-3507-4f3d-8b89-bd13cb92953e",
+      "Signal": {
+        "Id": "82536e6e-3507-4f3d-8b89-bd13cb92953e",
+        "Symbol": "ETH",
+        "Exchange": "BINANCE",
+        "Buy": {
+          "Min": 2800.0,
+          "Max": 3000.0
+        },
+        "Sell": [
+          3200.0,
+          3300.0,
+          3400.0,
+          3500.0,
+          3600.0
+        ]
+      },
+      "DateOrdered": "2024-03-30T12:30:00Z",
+      "BuyPrice": 2900.0,
+      "Stoploss": 2700.0
+    },
+    "DateOrdered": "2024-03-30T13:15:00Z",
+    "SellPrice": 3300.0,
+    "Profit": 400.0
+  }
+]
