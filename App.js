@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SignalDetails">
+      <Stack.Navigator initialRouteName="SignalList">
         <Stack.Screen name="Log" component={LogBinance} />
         <Stack.Screen name="SignalList" component={SignalListPage} />
         <Stack.Screen name="SignalDetails" component={SignalDetailsPage} />

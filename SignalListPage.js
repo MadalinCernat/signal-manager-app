@@ -1,24 +1,27 @@
-// SignalListPage.js
 import React, { useEffect, useState } from 'react';
 import { View, Text, Button } from 'react-native';
-import axios from 'axios';
 
 const SignalListPage = ({ navigation }) => {
   const [signals, setSignals] = useState([]);
 
   useEffect(() => {
-    // Fetch currencies from API
-    axios.get('YOUR_API_ENDPOINT')
-      .then(response => {
-        setSignals(response.data);
-      })
-      .catch(error => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://localhost:7174/api/Signal');
+        if (!response.ok) {
+          throw new Error('Failed to fetch signals');
+        }
+        const data = await response.json();
+        setSignals(data);
+      } catch (error) {
         console.error('Error fetching signals:', error);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
 
   const handleSignalPress = (signal) => {
-    // Navigate to currency details page
     navigation.navigate('SignalDetails', { signal });
   };
 
