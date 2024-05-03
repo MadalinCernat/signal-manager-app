@@ -14,7 +14,18 @@ namespace SignalManagerAppWebApi
             var builder = WebApplication.CreateBuilder(args);
 
             //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                //.AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+            //.AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
+            });
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
@@ -57,6 +68,8 @@ namespace SignalManagerAppWebApi
             });
 
             var app = builder.Build();
+
+            app.UseCors("AllowAll");
 
             if (app.Environment.IsDevelopment())
             {
