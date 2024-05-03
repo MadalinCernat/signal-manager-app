@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Modal } from 'react-native';
-import axios from 'axios';
 
 const SignalDetailsPage = () => {
   // Test signal with example values
